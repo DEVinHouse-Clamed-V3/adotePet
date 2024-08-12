@@ -1,0 +1,42 @@
+body {
+    background-image: url('assets/bg.jpg');
+}
+
+.container-home {
+    width: 70%;
+    background-color: #FFF;
+    margin: 40px auto;
+}
+
+.container-home h1 {
+    color: #802600;
+    font-size: 24px;
+    text-align: center;
+}
+
+.input-container {
+ display: flex;  
+ flex-direction: column;
+ /* gap: 5px;   */
+}
+
+.input-container label {
+  margin-bottom: 5px;
+}
+
+.input-container input {
+    width: 100%;
+    box-sizing: border-box;
+    height: 35px;
+    border-radius: 8px;
+    font-size: 18px;
+    border: 1px solid #a9480b;
+    outline-color: #802600;
+}
+
+.form-row {
+   display: flex;
+   justify-content: space-around;
+}
+
+
