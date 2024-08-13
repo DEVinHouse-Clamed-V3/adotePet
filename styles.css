@@ -1,11 +1,14 @@
 body {
     background-image: url('assets/bg.jpg');
+
 }
 
 .container-home {
     width: 70%;
     background-color: #FFF;
     margin: 40px auto;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 10px;
 }
 
 .container-home h1 {
@@ -24,7 +27,7 @@ body {
   margin-bottom: 5px;
 }
 
-.input-container input {
+.input-container input, textarea {
     width: 100%;
     box-sizing: border-box;
     height: 35px;
@@ -32,11 +35,45 @@ body {
     font-size: 18px;
     border: 1px solid #a9480b;
     outline-color: #802600;
+    resize: vertical;
+}
+
+.input-container textarea {
+    height: auto;
 }
 
 .form-row {
    display: flex;
-   justify-content: space-around;
+   justify-content: space-between;
+}
+
+.flex-45 {
+    flex-basis: 45%;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button-submit {
+    width: 100px;
+    border-radius: 8px;
+    color: #FFF;
+    background-color: #802600;
+    margin-top: 10px;
+}
+
+.footer-app {
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    background-color: #a9480b;
+}
+
+.footer-app p {
+    text-align: center;
 }
 
 

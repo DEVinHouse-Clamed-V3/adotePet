@@ -12,18 +12,39 @@
     <div class="container-home">
         <h1>Cadastro de pets</h1>
         <form>
+
             <div class="form-row">
-                <div class="input-container">
+                <div class="input-container flex-45">
                     <label for="nome">Nome do pet</label>
-                    <input id="nome" placeholder="Digite nome completo do pet" />
+                    <input id="nome" placeholder="Nome completo" />
                 </div>
-                <div class="input-container">
+                <div class="input-container flex-45"  >
                     <label for="idade">Idade</label>
                     <input type="number" id="idade" />
                 </div>
             </div>
+
+
+            <div class="input-container">
+                <label for="cor">Cor do pet</label>
+                <input type="color" id="cor" value="#000" />
+            </div>
+
+
+            <div class="input-container">
+                <label for="descricao">Descrição</label>
+                <textarea id="descricao" rows="5"></textarea>
+            </div>
+
+            <div class="button-container">
+                <button class="button-submit" type="submit">Salvar</button>
+            </div>
         </form>
     </div>
+
+    <footer class="footer-app">
+        <p>Todos os direitos reservador a lab 365</p>
+    </footer>
 </body>
 
 </html>
