@@ -20,7 +20,7 @@ body {
 .input-container {
  display: flex;  
  flex-direction: column;
-
+ margin: 5px 0;
 }
 
 .input-container label {
@@ -64,9 +64,17 @@ body {
 .button-submit {
     width: 100px;
     border-radius: 8px;
-    color: #FFF;
-    background-color: #802600;
+    height: 34px;
+    background-color: #FFF;
+    color: #802600;
     margin-top: 10px;
+    border: 1px solid #802600;
+    cursor: pointer;
+}
+
+.button-submit:hover {
+    background-color: #802600;
+    color: #FFF;
 }
 
 .footer-app {
