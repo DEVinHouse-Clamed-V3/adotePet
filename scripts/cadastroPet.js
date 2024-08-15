@@ -1,5 +1,8 @@
 function adicionarPet(event) {
-    console.log("ENTRANDO na funcao")
+
+    
+    /* ======= Capturou os valores do formulario  ======= */
+
     event.preventDefault() // evita da tela recarregar :)
 
     const foto = document.getElementById('foto').value
@@ -8,8 +11,6 @@ function adicionarPet(event) {
     const cor = document.getElementById('cor').value
     const descricao = document.getElementById('descricao').value
     const tipo = document.getElementById('tipo').value
-
-    console.log(cor)
     
     /* ======= VALIDACAO DO FORMULARIO  ======= */
 
@@ -53,8 +54,30 @@ function adicionarPet(event) {
         document.getElementById('tipo').style.borderWidth = ""
         document.getElementById('error-tipo').innerText = ""
     }
+
+    const pet = {
+        // id: Math.random(),
+        // id: crypto.randomUUID(),
+        id: Date.now(),
+        foto: foto,
+        nome: nome,
+        idade: idade,
+        cor: cor,
+        descricao: descricao,
+        tipo: tipo
+    }
+
     
-    /* 2 - colocar data */  
+    /* 2 - colocar data */ 
+
+    let listaNoLocalStorage = JSON.parse(localStorage.getItem("pets"))    // vai no local storage e pega a lista
+    
+    if(listaNoLocalStorage === null) listaNoLocalStorage = [] 
+
+    listaNoLocalStorage.push(pet) 
+     
+    localStorage.setItem("pets", JSON.stringify(listaNoLocalStorage)) // salvar no local storage
+ 
 }
 
 document // seu documento HTML
