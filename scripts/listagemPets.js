@@ -1,41 +1,42 @@
 
-function carregarDados(){
-     const petsNaMemoria = JSON.parse(localStorage.getItem('pets'))
+function carregarDados() {
+  const petsNaMemoria = JSON.parse(localStorage.getItem('pets'))
 
-      const lista = document.getElementById('lista-pets')
+  const lista = document.getElementById('lista-pets')
 
-      /*
-      const meuH1 = document.createElement('h1')
-      meuH1.innerText = "Testando os poderes do javascript"
-      lista.appendChild(meuH1)
-      */
+  petsNaMemoria.forEach((pet) => {
+    console.log(pet.nome)
 
-      /* Geração da div */
-      const div = document.createElement('div')
-      div.classList.add("item-pet")
-      
-      const img =  document.createElement('img')
-      img.setAttribute("width", "150px")
-      img.setAttribute('src', "https://m.media-amazon.com/images/I/71dULMAV6aL.jpg")
+    const div = document.createElement('div')
+    div.classList.add("item-pet")
 
-      div.append(img)
+    const img = document.createElement('img')
+    img.setAttribute("width", "150px")
+    img.setAttribute("height", "150px")
+    //img.style.objectFit = "cover"
+    img.setAttribute('src', pet.foto)
 
-      const h2 = document.createElement('h2')
-      h2.innerText = 'Gato Ronaldo'
+    div.append(img)
 
-      div.append(h2)
+    const h2 = document.createElement('h2')
+    h2.innerText = pet.nome
 
-      const button = document.createElement('button')
-      button.innerText = "Adicionar"
+    div.append(h2)
 
-      div.append(button)
+    const button = document.createElement('button')
+    button.innerText = "Adicionar"
+
+    div.append(button)
+
     /*  FIM Geração da div */
-     
-    console.log(div)
 
-    lista.appendChild(div)  
+    lista.append(div)
+  })
+
+  /* Geração da div */
+
 
 }
 
 
-document.addEventListener('DOMContentLoaded', carregarDados ) // quando for renderiza , vai disparar a funcao
+document.addEventListener('DOMContentLoaded', carregarDados) // quando for renderiza , vai disparar a funcao
