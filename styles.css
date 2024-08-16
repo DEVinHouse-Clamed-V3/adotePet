@@ -125,3 +125,18 @@ body {
     object-fit: cover;
 }
 
+.menu {
+    height: 50px;
+    background-color: #802600;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.menu a {
+    color: #FFF;
+    font-size: 18px;
+    font-weight: bold;
+}
