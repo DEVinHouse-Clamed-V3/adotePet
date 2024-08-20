@@ -93,3 +93,26 @@ document.getElementById("foto").addEventListener("input", function (event) {
     // event.target.value
     document.getElementById('visualizacao-url').setAttribute('src', this.value)
 })
+
+document.getElementById("descricao").addEventListener('blur', function (element) {
+    // console.log(this.value)
+    // console.log(element.target.value)
+    // console.log(document.getElementById("descricao").value)
+    let valorDigitado = this.value
+
+    const palavrasInadequadas = ["java", "github", "capivara", "pamonha", "delphin"]
+    //console.log(palavrasInadequadas[10])
+
+    palavrasInadequadas.forEach((palavra) => {
+         if(valorDigitado.includes(palavra)) {
+           // console.log("Tem a palavra na string", palavra)
+           valorDigitado = valorDigitado.replaceAll(palavra, '****')
+         }
+    })
+
+    //this.value = valorDigitado
+    document.getElementById('descricao').value = valorDigitado
+
+    console.log(valorDigitado)
+
+})
