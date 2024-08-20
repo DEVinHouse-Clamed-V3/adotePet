@@ -20,11 +20,7 @@ function carregarDados() {
         document.getElementById('dados-tabela').append(tr)
 
     });
-
-
-    
+   
 }
-
-
 
 document.addEventListener('DOMContentLoaded', carregarDados)

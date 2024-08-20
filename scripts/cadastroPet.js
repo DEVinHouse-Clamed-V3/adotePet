@@ -87,3 +87,9 @@ function adicionarPet(event) {
 document // seu documento HTML
     .getElementById('form-pet') // ir no documento e localizar o elemento com id form-pet
     .addEventListener('submit', adicionarPet) // adicionar um evento de submissão vinculado a funcao adicionar pet
+
+
+document.getElementById("foto").addEventListener("input", function (event) {
+    // event.target.value
+    document.getElementById('visualizacao-url').setAttribute('src', this.value)
+})

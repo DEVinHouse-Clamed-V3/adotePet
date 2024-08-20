@@ -50,5 +50,14 @@ function carregarDados() {
 
 }
 
-
 document.addEventListener('DOMContentLoaded', carregarDados) // quando for renderiza , vai disparar a funcao
+
+/*
+document.addEventListener('DOMContentLoaded', () => {
+  document.body.style.background = 'red'
+})
+  */
+
+document.getElementById('mostrar-mensagem').addEventListener('waiting', function () {
+  console.log("mexi mouse")
+})
