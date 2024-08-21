@@ -137,3 +137,8 @@
     font-size: 18px;
     font-weight: bold;
 }
+
+.pet-card-botoes {
+    display: flex;
+    gap: 20px;
+}

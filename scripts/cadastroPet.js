@@ -116,3 +116,10 @@ document.getElementById("descricao").addEventListener('blur', function (element)
     console.log(valorDigitado)
 
 })
+
+
+document.getElementById('nome').addEventListener('paste', function (event) {
+    event.preventDefault()
+    //this.value = this.value + this.value
+}) 
+   

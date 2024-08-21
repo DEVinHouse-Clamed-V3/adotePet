@@ -34,11 +34,20 @@ function carregarDados() {
 
     div.append(h2)
 
-    const button = document.createElement('button')
-    button.innerText = "Deletar"
-    button.onclick = () => deletar(pet.id)
-    
-    div.append(button)
+    const buttonDeletar = document.createElement('button')
+    buttonDeletar.innerText = "Deletar"
+    buttonDeletar.onclick = () => deletar(pet.id)
+
+    const buttonAdotar = document.createElement("button")
+    buttonAdotar.innerText = "Adotar"
+    buttonAdotar.onclick = () => window.location.href = "detalhes-pet.html"
+
+    const divBotoes = document.createElement('div')
+    divBotoes.classList.add("pet-card-botoes")
+    divBotoes.append(buttonAdotar)
+    divBotoes.append(buttonDeletar)
+
+    div.append(divBotoes)
 
     /*  FIM Geração da div */
 
