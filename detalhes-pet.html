@@ -4,36 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Detalhes</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css" />
-    </head>
+</head>
 
 <body>
 
-    <div class="card mt-4 mx-auto p-2" style="width: 60%;">
+    <div class="card mt-4 mx-auto p-2" style="width: 80%;">
 
-        <div class="d-flex gap-4 text-info">
-
-            <img 
-              id="foto"
-               src="https://mega.ibxk.com.br/2020/09/01/01103316776079.jpg" class="img-thumbnail" width="400px"
-                alt="...">
-
-            <div>
-                <h1 id="nome">Gato Feliano</h1>
-
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Idade: <span id="idade"></span></li>
-                    <li class="list-group-item">Cor:  <span id="cor"></span></li>
-                    <li class="list-group-item">Tipo:  <span id="tipo"></span></li>
-                    <li class="list-group-item">Descrição: <span id="descricao"></span> </li>
-                </ul>
-            </div>
-
+        <div id="mensagem-error" class="alert alert-danger" role="alert" style="display: none;">
+            Que pena ! Esse pet já foi adotado :)
         </div>
 
+        <div id="conteudo">
+            <div class="d-flex gap-4 text-info p-2 row">
+
+                <img id="foto" src="" class="img-thumbnail col-md-5" width="400px" alt="..."
+                    style="object-fit: contain;">
+
+                <div class="col-md-5">
+                    <h1 id="nome"></h1>
+
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Idade: <span id="idade"></span></li>
+                        <li class="list-group-item">Cor: <span id="cor"></span></li>
+                        <li class="list-group-item">Tipo: <span id="tipo"></span></li>
+                        <li class="list-group-item">Descrição: <span id="descricao"></span> </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
 
     </div>
 
@@ -44,7 +46,7 @@
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
 
-        <script src="scripts/detalhes.js" ></script>
+    <script src="scripts/detalhes.js"></script>
 
 </body>
 

@@ -11,18 +11,21 @@ function carregarDetalhesPet() {
    const petEncontrado = petsNoLocalStorage.find((item) => item.id == idUrl)
    console.log(petEncontrado)
 
-   document.getElementById('foto').style.borderColor = petEncontrado.cor
-   document.getElementById('foto').style.borderWidth = '5px'
+   if(petEncontrado === undefined) {
+        window.location.href = "404.html"
+        //document.getElementById('mensagem-error').style.display = "block"
+        //document.getElementById('conteudo').style.display = 'none'
+   } else {
+    document.getElementById('nome').innerText = petEncontrado.nome
+    document.getElementById('foto').setAttribute('src', petEncontrado.foto)
+    document.getElementById('idade').innerText = petEncontrado.idade
+    document.getElementById('cor').innerText = petEncontrado.cor
+    document.getElementById('tipo').innerText = petEncontrado.tipo
+    document.getElementById('descricao').innerText = petEncontrado.descricao
+   }
 
-   document.getElementById('nome').innerText = petEncontrado.nome
-   document.getElementById('foto').setAttribute('src', petEncontrado.foto)
-   document.getElementById('idade').innerText = petEncontrado.idade
-   document.getElementById('cor').innerText = petEncontrado.cor
-   document.getElementById('tipo').innerText = petEncontrado.tipo
-   document.getElementById('descricao').innerText = petEncontrado.descricao
-
-
-
+   
+  
 }
 
 document.addEventListener('DOMContentLoaded', carregarDetalhesPet)
