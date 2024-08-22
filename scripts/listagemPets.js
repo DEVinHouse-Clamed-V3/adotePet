@@ -1,3 +1,4 @@
+
 function deletar(idRecebido){
   // 1 -  ir no local e busca o array de pets
    const petsAtuaisNaMemoria = JSON.parse(localStorage.getItem('pets'))
@@ -40,7 +41,7 @@ function carregarDados() {
 
     const buttonAdotar = document.createElement("button")
     buttonAdotar.innerText = "Adotar"
-    buttonAdotar.onclick = () => window.location.href = "detalhes-pet.html"
+    buttonAdotar.onclick = () => window.location.href = "detalhes-pet.html?id=" + pet.id
 
     const divBotoes = document.createElement('div')
     divBotoes.classList.add("pet-card-botoes")
@@ -67,6 +68,3 @@ document.addEventListener('DOMContentLoaded', () => {
 })
   */
 
-document.getElementById('mostrar-mensagem').addEventListener('waiting', function () {
-  console.log("mexi mouse")
-})

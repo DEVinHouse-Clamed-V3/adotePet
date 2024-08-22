@@ -142,3 +142,10 @@
     display: flex;
     gap: 20px;
 }
+
+
+/*
+.list-group-flush {
+    border: 1px solid red !important;
+}
+    */
