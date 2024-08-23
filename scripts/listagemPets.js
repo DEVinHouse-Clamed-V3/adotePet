@@ -62,9 +62,32 @@ function carregarDados() {
 
 document.addEventListener('DOMContentLoaded', carregarDados) // quando for renderiza , vai disparar a funcao
 
-/*
+
+
 document.addEventListener('DOMContentLoaded', () => {
-  document.body.style.background = 'red'
+
+ console.log( 'todos', document.querySelectorAll('.container-pets .item-pet'))
+}) // quando for renderiza , vai disparar a funcao
+
+
+
+document.getElementById('adotar-todos').addEventListener('click', () => {
+  const elements = document.getElementsByClassName('item-pet')
+
+  Array.from(elements).forEach((element) => {
+    element.style.backgroundColor = '#CCC'; // Altera a cor do texto para vermelho
+});
+
+
+
+
+  /* Exemplo com tags */
+
+
+
+
+
+
 })
-  */
+ 
 
